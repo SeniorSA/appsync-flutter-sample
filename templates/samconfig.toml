@@ -1,0 +1,10 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "person-api"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-i5ohu208bwhx"
+s3_prefix = "person-api"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_NAMED_IAM"
