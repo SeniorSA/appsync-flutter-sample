@@ -31,17 +31,18 @@ class SynchronizeService {
             iso8601ToDateTime(prefs.getString('lastSynchronize').toString());
       }
       if (await _isConnected()) {
-        await _doGgetOnlinePerson(lastSynchronize: lastSynchronize);
+        await _doGetOnlinePerson(lastSynchronize: lastSynchronize);
       }
     } on GraphQLException catch (err) {
       _showToast(err.message);
     } catch (err) {
       print(err);
-      _showToast("Ocorreu um erro inesperado!");
+      _showToast(err.toString());
     }
   }
 
-  Future<void> _doGgetOnlinePerson({DateTime lastSynchronize}) async {
+  Future<void> _doGetOnlinePerson({DateTime lastSynchronize}) async {
+    await Future.delayed(Duration(seconds: 1));
     var people = await _personService.getPersonGraphQL(datetime: lastSynchronize);
     for (var person in people) {
       person.sync = true;

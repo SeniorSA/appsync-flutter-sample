@@ -10,6 +10,10 @@ class PersonService extends CrudService<Person> {
 
   static final PersonService instance = PersonService._privateConstructor();
 
+  factory PersonService() {
+    return instance;
+  }
+
   static final GraphQL graphQLinstance = GraphQL.instance;
 
   getTableName() {
@@ -54,7 +58,7 @@ class PersonService extends CrudService<Person> {
     );
     var result = await graphQLinstance.client.query(query);
     if (result.exception != null && result.exception.graphqlErrors.length > 0) {
-      throw new Exception(result.exception.graphqlErrors[0].message);
+      throw new GraphQLException(result.exception.graphqlErrors[0].message);
     }
     List<dynamic> people = result.data['listPeople']['items'];
     if (people != null && people.length > 0) {

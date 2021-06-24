@@ -1,8 +1,8 @@
-# appsync_flutter
+# App para uso offline integrado com o AWS AppSync 
 
-This app is an example of Offline Flutter integrated with AWS AppSync
+Projeto de demonstração para aplicativos Flutter, que necessitam de um funcionamento offline e integrando quando existir internet, através de uma API GraphQL.
 
-## Getting Started
+## Instalação
 
 This project is a starting point for a Flutter application.
 

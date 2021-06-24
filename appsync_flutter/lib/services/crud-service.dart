@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:appsync_flutter/models/crud-model.dart';
 import 'package:appsync_flutter/services/synchronize-service.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
 
 abstract class CrudService<T extends CrudModel> {
