@@ -80,12 +80,14 @@ Resources:
           id: String!
           name: String!
           last_modified: AWSDateTime!
+          deleted: Boolean!
         }
 
         type Person {
           id: String
           name: String
           last_modified: AWSDateTime
+          deleted: Boolean!
         }
 
         type PersonPage {
@@ -97,6 +99,12 @@ Resources:
           id: TableStringFilterInput
           name: TableStringFilterInput
           last_modified: TableStringFilterInput
+          deleted: TableBooleanFilterInput
+        }
+
+        input TableBooleanFilterInput {
+          ne: Boolean
+          eq: Boolean
         }
 
         input TableStringFilterInput {
@@ -195,6 +203,7 @@ Resources:
             "id": $util.dynamodb.toDynamoDBJson($ctx.args.input.id),
             "last_modified": $util.dynamodb.toDynamoDBJson($ctx.args.input.last_modified),
             "name": $util.dynamodb.toDynamoDBJson($ctx.args.input.name),
+            "deleted": $util.dynamodb.toDynamoDBJson($ctx.args.input.deleted),
           }
 
         }
