@@ -22,5 +22,3 @@ A base, de forma genérica contém quatro campos pricipais, que são responsáve
 
 ### Sincronia dos dados
 Toda vez que o dispositivo estiver online, os dados serão enviados para o AppSync, com base no campo sync da base local e baixados do mesmo com base na data da ultima sincronização.
-
-Para mais detalhes acesse a publicação no link(ainda sem link)
