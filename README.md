@@ -6,6 +6,7 @@ Projeto de demonstração para aplicativos Flutter, que necessitam de um funcion
   
 Antes de iniciar a instalação é necessário ter o [SAM](https://aws.amazon.com/pt/serverless/sam/), em seu sistema operacional para a criação do template no [CloudFormation](https://aws.amazon.com/pt/cloudformation/).
 - Para criação do DynamoDB e AppSync pode ser utilizado o comando:  `sam deploy --guided --capabilities CAPABILITY_NAMED_IAM -t templates/template.yml`.
+- Após o deploy do template é necessário acessar o arquivo `/lib/environment/enrironment.dart` e apontar o Endpoint e API_KEY do AppSync.
 - Para execução do App importe o projeto para o Android Studio como projeto Flutter ou utilize a linha de comando, para mais detalhes verifique a documetação oficial do [Flutter](https://flutter.dev/docs/get-started/install).
 
 ## Conceitos
