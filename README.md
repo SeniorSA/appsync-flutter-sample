@@ -9,8 +9,8 @@ Antes de iniciar a instalação é necessário ter o [SAM](https://aws.amazon.co
 - Para execução do App importe o projeto para o Android Studio como projeto Flutter ou utilize a linha de comando, para mais detalhes verifique a documetação oficial do [Flutter](https://flutter.dev/docs/get-started/install).
 
 ## Conceitos
-De forma minimalista, o aplicativo funciona interamente offline, salvando os dados em uma base SqLite e quando 
-o estado de rede do ispositivo estiver online estas informações serão sincroniadas com a nuvem.
+De forma minimalista, o aplicativo funciona inteiramente offline, salvando os dados em uma base SqLite e quando 
+o estado de rede do dispositivo estiver online estas informações serão sincronizadas com a nuvem.
 
 ### Dados no SqLite
 A base, de forma genérica contém quatro campos pricipais, que são responsáveis por todo o fluxo offline do usuário:
@@ -20,6 +20,6 @@ A base, de forma genérica contém quatro campos pricipais, que são responsáve
 - sync campo Boolean informando se o dado ja foi sincronizado.
 
 ### Sincronia dos dados
-Toda vez que o dispositivo estiver online, os dados serão enviados para o AppSync, com base no campo sync da base local e baixados do mesmo com base na data da ultima sincroniação.
+Toda vez que o dispositivo estiver online, os dados serão enviados para o AppSync, com base no campo sync da base local e baixados do mesmo com base na data da ultima sincronização.
 
 Para mais detalhes acesse a publicação no link(ainda sem link)
