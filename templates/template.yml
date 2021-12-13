@@ -154,7 +154,7 @@ Resources:
           "operation" : "Scan",
           "filter": #if($context.args.filter) $util.transform.toDynamoDBFilterExpression($ctx.args.filter) #else null #end,
           #if( $ctx.args.limit )
-                "limit": $ctx.args.count,
+                "limit": $ctx.args.limit,
           #end
           "nextToken": $util.toJson($util.defaultIfNullOrBlank($ctx.args.nextToken, null))
         }
